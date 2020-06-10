@@ -41,3 +41,6 @@ $("#area2").click(function () {
 
 ## 效果图
 ![效果图](https://lemonliuchen.github.io/mobiscroll_city/img/demo.png)
+
+## 动态效果图
+![动态效果图](https://lemonliuchen.github.io/mobiscroll_city/img/demo.gif)
