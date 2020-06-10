@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<title>省市区选择</title>
+
+	<link href="css/picker.css" rel="stylesheet" />
+
+	<style>
+		body{padding: 2rem; background-color: #fefefe;}
+		input{width: 90%; padding: 0rem 2rem; height: 3rem; background-color: #eee; border: 1px solid #e8e8e8; font-size: 1.2rem; margin: 0.5rem 0rem 1rem;}
+	</style>
+</head>
+<body>
+
+	<h3>省一级</h3>
+	<input type="text" name="area" placeholder="请选择" value="" class="" id="area1" autocomplete="off">
+
+	<h3>省市二级</h3>
+	<input type="text" name="area" placeholder="请选择" value="" class="" id="area2" autocomplete="off">
+
+	<h3>省市区三级</h3>
+	<input type="text" name="area" placeholder="请选择" value="" class="" id="area3" autocomplete="off">
+
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/font_size.js"></script>
+	<script src="js/picker.min.js"></script>
+	<script src="js/city_picker.js"></script>
+
+	<script>
+		$("#area1").click(function () {
+			var nowValue = $(this)[0];
+			new Picker({
+	            "title": '请选择',//标题(可选)
+	            "defaultValue": nowValue.value,//默认值-多个以空格分开（可选）
+	            "type": 1,//需要联动级数[1、2、3]（可选）
+	            "data": cityData,//数据(必传)
+	            "keys": {
+	            	"id": "Code",
+	            	"value": "Name",
+	                "childData": "level"//最多3级联动
+	            },//数组内的键名称(必传，id、text、data)
+	            "callBack": function (val) {
+	                //回调函数（val为选择的值）
+	                nowValue.value = val;
+	            }
+	        });
+		})
+		$("#area2").click(function () {
+			var nowValue = $(this)[0];
+			new Picker({
+	            "title": '请选择',//标题(可选)
+	            "defaultValue": nowValue.value,//默认值-多个以空格分开（可选）
+	            "type": 2,//需要联动级数[1、2、3]（可选）
+	            "data": cityData,//数据(必传)
+	            "keys": {
+	            	"id": "Code",
+	            	"value": "Name",
+	                "childData": "level"//最多3级联动
+	            },//数组内的键名称(必传，id、text、data)
+	            "callBack": function (val) {
+	                //回调函数（val为选择的值）
+	                nowValue.value = val;
+	            }
+	        });
+		})
+		$("#area3").click(function () {
+			var nowValue = $(this)[0];
+			new Picker({
+	            "title": '请选择',//标题(可选)
+	            "defaultValue": nowValue.value,//默认值-多个以空格分开（可选）
+	            "type": 3,//需要联动级数[1、2、3]（可选）
+	            "data": cityData,//数据(必传)
+	            "keys": {
+	            	"id": "Code",
+	            	"value": "Name",
+	                "childData": "level"//最多3级联动
+	            },//数组内的键名称(必传，id、text、data)
+	            "callBack": function (val) {
+	                //回调函数（val为选择的值）
+	                nowValue.value = val;
+	            }
+	        });
+		})
+	</script>
+</body>
+</html>
