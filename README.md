@@ -1,6 +1,9 @@
 # mobiscroll_city
 Three level linkage selection of provincial and urban areas at mobile end
 
+## 请用移动设备打开demo或者使用浏览器模拟移动端
+[Demo](https://lemonliuchen.github.io/mobiscroll_city/index.html)
+
 ## options
 ```javascript
 "title": '请选择',//标题(可选)
